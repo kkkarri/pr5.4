@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="Ввести Х" onclick="inputNumber()">
+<div id="result"></div>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+    function inputNumber()
+    {
+        var x1 = parseFloat(prompt('Введіть початок', ''));
+        var x2=parseFloat(prompt('Введіть кінець', ''));
+        var n = parseFloat(prompt('Введіть крок', ''));
+        var x;
+        var f;
+        var results = '';
+        var e = Math.E;
+        for(x=x1;x<=x2;x=x+n)
+        {
+            if (!isNaN(x))
+            {
+                if (x < 4)
+                {
+                    f = Math.pow(x,2) + Math.pow(e, x);
+                    results += 'Результат обчислення для x = ' + x + ': F = ' + f + '<br>';
+                }
+                else if (x == 4)
+                {
+                    f = Math.PI+2;
+                    results += 'Результат обчислення для x = ' + x + ': F = ' + f + '<br>';
+                }
+                elsegi
+                {
+                    if(Math.sin(x)!== 0)
+                    {
+                        f = Math.pow(Math.sin(x),2) + Math.log(x);
+                        results += 'Результат обчислення для x = ' + x + ': F = ' + f + '<br>';
+                    }
+                    else results += 'Результат обчислення для x = ' + x + ': F = не існує<br>';
+                }
+            }
+        }
+        document.getElementById('result').innerHTML = results;
+    }
+
+
+</SCRIPT>
+</body>
+</html>
